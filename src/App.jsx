@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <div>aslo</div>
-      <BrowserRouter>
+      <BrowserRouter basename={window.location.pathname || ''}>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/profile" element={<Profile />} />

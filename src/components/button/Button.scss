@@ -1,0 +1,12 @@
+.btn {
+  height: 40px;
+  border-radius: 7px;
+  background-color: rgb(62, 145, 253);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  &:hover {
+    background-color: darken(rgb(62, 145, 253), 10%);
+  }
+}

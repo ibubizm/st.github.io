@@ -1,0 +1,80 @@
+export const cars = [
+  {
+    id: 1,
+    brand: 'Ferarri',
+    model: 'pista',
+    country: 'italy',
+  },
+  {
+    id: 2,
+    brand: 'Bugatti',
+    model: 'chiron',
+    country: 'france',
+  },
+  {
+    id: 3,
+    brand: 'Ferarri',
+    model: '488 italia',
+    country: 'italy',
+  },
+  {
+    id: 4,
+    brand: 'McLaren',
+    model: '760',
+    country: 'england',
+  },
+  {
+    id: 5,
+    brand: 'Porsche',
+    model: '911',
+    country: 'germany',
+  },
+  {
+    id: 6,
+    brand: 'Mini',
+    model: 'cooper s',
+    country: 'england',
+  },
+  {
+    id: 7,
+    brand: 'audi',
+    model: 'r8',
+    country: 'germany',
+  },
+  {
+    id: 8,
+    brand: 'BMW',
+    model: 'm4',
+    country: 'germany',
+  },
+  {
+    id: 9,
+    brand: 'Audi',
+    model: 'a7',
+    country: 'germany',
+  },
+  {
+    id: 10,
+    brand: 'Lamborghini',
+    model: 'aventador',
+    country: 'italy',
+  },
+  {
+    id: 11,
+    brand: 'Peugeot',
+    model: '407',
+    country: 'france',
+  },
+  {
+    id: 12,
+    brand: 'Bently',
+    model: 'GT',
+    country: 'england',
+  },
+  {
+    id: 13,
+    brand: 'Citroën',
+    model: 'c7',
+    country: 'france',
+  },
+]

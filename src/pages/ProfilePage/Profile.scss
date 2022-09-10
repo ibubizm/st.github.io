@@ -1,0 +1,22 @@
+.profile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.avatar {
+  width: 40px;
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+.posts-creation {
+  display: flex;
+  flex-direction: column;
+  textarea {
+    margin-bottom: 10px;
+  }
+}

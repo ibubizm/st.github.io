@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main__link {
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 40px;
+  padding: 30px;
+}

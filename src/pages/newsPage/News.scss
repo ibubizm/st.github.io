@@ -1,0 +1,36 @@
+.news {
+  padding-top: 30px;
+}
+.sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__list {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+  }
+  &__item {
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 9px;
+    padding: 5px 10px;
+    transition: all ease;
+    &:hover {
+      background-color: rgb(62, 145, 253);
+      color: #fff;
+    }
+  }
+}
+
+.cars {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.active {
+  background-color: rgb(62, 145, 253);
+  color: #fff;
+}

@@ -1,0 +1,18 @@
+.car {
+  background-color: #fff;
+  padding: 30px;
+  width: 300px;
+  border-radius: 20px;
+
+  &__name {
+    display: flex;
+    font-size: 23px;
+    font-weight: 500;
+    gap: 10px;
+  }
+
+  &__country {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

@@ -7,7 +7,6 @@ import { Main } from './pages/Main/Main'
 function App() {
   return (
     <div className="App">
-      <div>aslo</div>
       <BrowserRouter basename={window.location.pathname || ''}>
         <Routes>
           <Route path="/" element={<Main />} />

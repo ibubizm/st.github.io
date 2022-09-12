@@ -4,26 +4,25 @@ import { useState } from 'react'
 import { Card } from '../../components/Card/Card'
 import { Modal } from '../../components/Modal/modal'
 import { useDispatch, useSelector } from 'react-redux'
-import { add } from '../../redux/reducer'
+import { add, modalClose, modalOpen } from '../../redux/reducer'
 import { Button } from '../../components/button/Button'
 
 export const Profile = () => {
   const dispatch = useDispatch()
-  const { posts } = useSelector((state) => state.postReducer)
+  const { posts, visible } = useSelector((state) => state.postReducer)
   const [value, setValue] = useState('')
-  const [visible, setVisible] = useState(false)
 
   const createPost = (e) => {
     e.preventDefault()
     const id = Date.now()
     dispatch(add({ id, value, date: new Date().toLocaleString() }))
     setValue('')
-    setVisible(false)
+    dispatch(modalClose())
   }
 
   const onClose = (e) => {
     e.stopPropagation()
-    setVisible(false)
+    dispatch(modalClose())
   }
 
   return (
@@ -36,7 +35,7 @@ export const Profile = () => {
           <div className="name">Ernest</div>
           <div className="name">Ibubizm</div>
         </div>
-        <Button onClick={() => setVisible(!visible)}>Создать Пост</Button>
+        <Button onClick={() => dispatch(modalOpen())}>Создать Пост</Button>
       </div>
       {visible && (
         <Modal title={'Новый пост'} onClose={onClose}>

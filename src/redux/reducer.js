@@ -4,7 +4,7 @@ const postReducer = createSlice({
   name: 'toolkit',
   initialState: {
     posts: [],
-    news: [],
+    visible: false,
   },
   reducers: {
     add(state, action) {
@@ -23,8 +23,17 @@ const postReducer = createSlice({
     remove(state, action) {
       state.posts = state.posts.filter((post) => post.id !== action.payload.id)
     },
+
+    modalOpen(state) {
+      state.visible = true
+    },
+
+    modalClose(state) {
+      state.visible = false
+    },
   },
 })
 
 export default postReducer.reducer
-export const { add, remove, change } = postReducer.actions
+export const { add, remove, change, modalClose, modalOpen } =
+  postReducer.actions

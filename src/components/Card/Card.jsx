@@ -1,13 +1,13 @@
 import './Card.scss'
 import dotsImg from './dots.svg'
 import { useState, useEffect, useRef } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { change, modalClose, modalOpen, remove } from '../../redux/reducer'
+import { useDispatch } from 'react-redux'
+import { change, remove } from '../../redux/reducer'
 import { Modal } from '../Modal/modal'
 import { Button } from '../button/Button'
 
 export const Card = ({ post }) => {
-  const { visible } = useSelector((state) => state.postReducer)
+  const [visible, setVisible] = useState(false)
   const [value, setValue] = useState('')
 
   const [isOpen, setIsOpen] = useState(false)
@@ -16,12 +16,12 @@ export const Card = ({ post }) => {
 
   const changePost = () => {
     dispatch(change({ id: post.id, value, date: new Date().toLocaleString() }))
-    dispatch(modalClose())
+    setVisible(false)
   }
 
   const onClose = (e) => {
     e.stopPropagation()
-    dispatch(modalClose())
+    setVisible(false)
   }
 
   const handleOutsideClick = (event) => {
@@ -59,7 +59,8 @@ export const Card = ({ post }) => {
                 </li>
                 <li
                   onClick={() => {
-                    dispatch(modalOpen())
+                    setVisible(true)
+
                     setIsOpen(false)
                   }}
                 >

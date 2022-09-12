@@ -14,10 +14,12 @@ export const Profile = () => {
 
   const createPost = (e) => {
     e.preventDefault()
-    const id = Date.now()
-    dispatch(add({ id, value, date: new Date().toLocaleString() }))
-    setValue('')
-    dispatch(modalClose())
+    if (value) {
+      const id = Date.now()
+      dispatch(add({ id, value, date: new Date().toLocaleString() }))
+      setValue('')
+      dispatch(modalClose())
+    }
   }
 
   const onClose = (e) => {

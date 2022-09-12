@@ -6,15 +6,15 @@ import { Main } from './pages/Main/Main'
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter basename={window.location.pathname || ''}>
+    <BrowserRouter basename={window.location.pathname || ''}>
+      <div className="App">
+        <Main />
         <Routes>
-          <Route path="/" element={<Main />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/news" element={<News />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   )
 }
 

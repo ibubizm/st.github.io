@@ -75,6 +75,7 @@ export const Card = ({ post }) => {
         <Modal title={'Изменить пост'} onClose={onClose}>
           <div className="posts-creation">
             <textarea
+              placeholder="изменить пост"
               value={value}
               onChange={(e) => setValue(e.target.value)}
             />

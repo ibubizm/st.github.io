@@ -16,7 +16,7 @@ export const Profile = () => {
   const createPost = (e) => {
     e.preventDefault()
     const id = Date.now()
-    dispatch(add({ id, value, date: Date().toLocaleString() }))
+    dispatch(add({ id, value, date: new Date().toLocaleString() }))
     setValue('')
     setVisible(false)
   }
@@ -42,6 +42,7 @@ export const Profile = () => {
         <Modal title={'Новый пост'} onClose={onClose}>
           <div className="posts-creation">
             <textarea
+              placeholder="новый пост"
               value={value}
               onChange={(e) => setValue(e.target.value)}
             />
